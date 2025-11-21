@@ -31,15 +31,21 @@ namespace projektgyak
                 string valasztas = Console.ReadLine();
                 switch (valasztas)
                 {
-                    case "0": return;
-                    case "1": Console.WriteLine("emailek listázása"); break;
+                    case "0" : return;
+                    case "1" :  
+                        Console.Clear();
+                        Console.WriteLine("e-mail címet");
                         int sorszam = 0;
                             foreach(string e_mail in e_mailok)
                         {
                             Console.WriteLine($"{sorszam++}. {e_mail}");
                             
                         }
-                    case "2": Console.WriteLine("új emailek"); break;
+                        break;
+                    case "2": Console.WriteLine("Adja meg az új email címet:");
+                        string uj_email = Console.ReadLine();
+                        e_mailok.Add(uj_email);
+                        break;
                     case "3": Console.WriteLine("email törlése"); break;
                     case "4": Console.WriteLine("érvényes listázása"); break;
                     default: Console.WriteLine("rossz parancs"); break;

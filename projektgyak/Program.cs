@@ -51,9 +51,18 @@ namespace projektgyak
                         e_mailok.RemoveAt(index);
                         break;
                     case "4": Console.WriteLine("érvényes listázása");
-                        
+                        foreach (string e_mail in e_mailok)
+                        {
+                            if (e_mail.Contains("@") && e_mail.Contains("."))
+                            {
+                                Console.WriteLine(e_mail);
+                            }
+                        }
+
                         break;
-                    default: Console.WriteLine("rossz parancs"); break;
+                    default: Console.WriteLine("rossz parancs");
+                   
+                        break;
                 }
                 Console.ReadLine();
             }

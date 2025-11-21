@@ -46,8 +46,13 @@ namespace projektgyak
                         string uj_email = Console.ReadLine();
                         e_mailok.Add(uj_email);
                         break;
-                    case "3": Console.WriteLine("email törlése"); break;
-                    case "4": Console.WriteLine("érvényes listázása"); break;
+                    case "3": Console.WriteLine("email törlése");
+                        int index = Convert.ToInt32(Console.ReadLine());
+                        e_mailok.RemoveAt(index);
+                        break;
+                    case "4": Console.WriteLine("érvényes listázása");
+                        
+                        break;
                     default: Console.WriteLine("rossz parancs"); break;
                 }
                 Console.ReadLine();

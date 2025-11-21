@@ -33,6 +33,12 @@ namespace projektgyak
                 {
                     case "0": return;
                     case "1": Console.WriteLine("emailek listázása"); break;
+                        int sorszam = 0;
+                            foreach(string e_mail in e_mailok)
+                        {
+                            Console.WriteLine($"{sorszam++}. {e_mail}");
+                            
+                        }
                     case "2": Console.WriteLine("új emailek"); break;
                     case "3": Console.WriteLine("email törlése"); break;
                     case "4": Console.WriteLine("érvényes listázása"); break;
